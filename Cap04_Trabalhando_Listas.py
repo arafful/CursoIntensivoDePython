@@ -29,3 +29,8 @@ for i in range(1, 11):
 
 print(quadrados)
 print("\n")
+
+# List comprehension
+quadrados = [i ** 2 for i in range(1, 11)]
+print(quadrados)
+print("\n")
