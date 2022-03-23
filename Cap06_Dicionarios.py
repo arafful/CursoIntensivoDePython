@@ -47,6 +47,53 @@ linguagens_favoritas = {'jen': 'python', 'sarah': 'c', 'edward': 'ruby', 'phil':
 
 print('A linguagem favorita da Sarah é', linguagens_favoritas['sarah'].title() + '.')
 
+user_0 = {
+    'username': 'efermi',
+    'first': 'enrico',
+    'last': 'fermi'
+}
+for key, value in user_0.items():
+    print("\nKey:", key)
+    print("Value:", value)
+
+alien_0 = {'color': 'green', 'points': 5}
+alien_1 = {'color': 'yellow', 'points': 10}
+alien_2 = {'color': 'red', 'points': 15}
+aliens = [alien_0, alien_1, alien_2]
+
+for alien in aliens:
+    print(alien)
+
+# Criaremos uma lista vazia para armazenar alienígenas
+aliens = []
+# Vamos crias 30 alienígenas verdes
+for alien_number in range(30):
+    new_alien = {'color': 'green', 'points': 5, 'speed': 'slow'}
+    aliens.append(new_alien)
+
+# Mostrar os 5 primeiros alienígenas
+print("...")
+for alien in aliens[:5]:
+    print(alien)
+
+print("...")
+print("Número total de aliens:", str(len(aliens)))
+
+# Alterando dados dos 3 primeiros aliens
+for alien in aliens[0: 3]:
+    alien['color'] = 'yellow'
+    alien['speed'] = 'medium'
+    alien['points'] = 10
+
+# Mostrar os 5 primeiros alienígenas
+print("...")
+for alien in aliens[:5]:
+    print(alien)
+
+print("...")
+print("Número total de aliens:", str(len(aliens)))
+
+
 
 
 
