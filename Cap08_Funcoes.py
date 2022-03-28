@@ -43,6 +43,7 @@ def build_person(first_name, last_name, age=''):
         person['age'] = age
     return person
 
+
 musician = build_person('jimi', 'hendrix')
 print(musician)
 musician = build_person('jimi', 'hendrix', age=27)
@@ -52,6 +53,7 @@ print(musician)
 def get_formatted_name(first_name, last_name):
     full_name = first_name + ' ' + last_name
     return full_name.title()
+
 
 while True:
     print('\nPlease tell me your name:')
@@ -64,3 +66,45 @@ while True:
         break
     formatted_name = get_formatted_name(fname, lname)
     print("\nHello", formatted_name + '!')
+
+
+def greet_users(names):
+    # Exibe uma saudação simples a cada usuário da lista
+    for name in names:
+        print("Olá,", name.title() + '!')
+
+
+usernames = ['andre', 'luiz', 'figueiredo', 'rafful']
+greet_users(usernames)
+
+# printing models
+unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron']
+completed_models = []
+
+while unprinted_designs:
+    current_design = unprinted_designs.pop()
+    print("Printing model:" + current_design)
+    completed_models.append(current_design)
+
+print("\nThe following models have been printed:")
+for completed_model in completed_models:
+    print(completed_model)
+
+
+def print_models(unprinted_designs):
+    while unprinted_designs:
+        current_design = unprinted_designs.pop()
+        print("Printing model:" + current_design)
+        completed_models.append(current_design)
+
+
+def show_completed_models(completed_models):
+    print("\nThe following models have been printed:")
+    for completed_model in completed_models:
+        print(completed_model)
+
+
+unprinted_designs = ['capa de iphone', 'robô aspirador', 'qualquer porra']
+completed_models = []
+print_models(unprinted_designs)
+show_completed_models(completed_models)

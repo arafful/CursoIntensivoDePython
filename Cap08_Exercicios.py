@@ -72,3 +72,64 @@ city_country('rio de janeiro', 'brasil')
 city_country('campinas', 'brasil')
 city_country('Buenos Aires', 'argentina')
 
+# 8.7 - Albúm
+print("\n===< EXERCÍCIO 8.7 >===")
+
+
+def make_album(artista, nome_album, num_faixas=''):
+    album = {'artista': artista.title(), 'album': nome_album.title()}
+    if num_faixas:
+        album['faixas'] = num_faixas
+    return album
+
+
+print(make_album('madona', 'imaculate colection'))
+
+# 8.8 - Albúns dos usuários
+print("\n===< EXERCÍCIO 8.8 >===")
+
+meus_albuns = []
+while True:
+    print("Digite a lista de seus albúns favoritos.\ndigite 'q' para sair.")
+    nome_artista = input("Artista: ")
+    if nome_artista == 'q':
+        break
+    nome_album = input("Álbum: ")
+    if nome_album == 'q':
+        break
+
+    meus_albuns.append(make_album(nome_artista, nome_album))
+
+for album in meus_albuns:
+    print(album)
+
+# 8.9 - Mágicos
+print("\n===< EXERCÍCIO 8.9 >===")
+
+
+def show_magicians(magicos):
+    for magico in magicos:
+        print(magico.title())
+
+
+magicos = ['andre rafful', 'monica pedrosa', 'felipe hassad rafful', 'luiza hassad pedrosa']
+show_magicians(magicos)
+
+# 8.10 - Grandes Mágicos
+print("\n===< EXERCÍCIO 8.9 >===")
+
+
+def make_great(magicos):
+    new_magicians = []
+    for magico in magicos:
+        new_magicians.append("Great " + magico)
+
+    return new_magicians
+
+
+magicos = ['andre rafful', 'monica pedrosa', 'felipe hassad rafful', 'luiza hassad pedrosa']
+novos_magicos = make_great(magicos)
+show_magicians(novos_magicos)
+show_magicians(novos_magicos)
+
+
