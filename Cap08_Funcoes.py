@@ -108,3 +108,18 @@ unprinted_designs = ['capa de iphone', 'robô aspirador', 'qualquer porra']
 completed_models = []
 print_models(unprinted_designs)
 show_completed_models(completed_models)
+
+# Usando uma função de módulo externo
+import Cap08_Modulo_Funcoes
+Cap08_Modulo_Funcoes.make_pizza(16, 'pepperoni')
+Cap08_Modulo_Funcoes.make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
+
+# Importando apenas uma funçao com alias
+from Cap08_Modulo_Funcoes import make_pizza as mp
+mp(16, 'calabresa')
+mp(12, '4 queijos', 'aliche', 'oregano')
+
+# Usando alias para o nome do Módulo
+import Cap08_Modulo_Funcoes as f
+f.make_pizza(16, 'napolitana')
+f.make_pizza(12, 'cebola', 'bacon', 'azeitona')
