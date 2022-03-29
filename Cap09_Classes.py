@@ -66,6 +66,18 @@ class Carro():
             print("Não é permitido reduzir o valor do odômetro.")
 
 
+class CarroEletrico(Carro):
+    """ Apresenta aspectos específicos de carros elétricos """
+    def __init__(self, marca, modelo, ano):
+        """ Inicializa os atributos da classe pai """
+        super().__init__(marca, modelo, ano)
+        self.tamanho_bateria = 70
+
+    def descreve_bateria(self):
+        """ Exibe uma frase que descreve a capacidade da bateria """
+        print("Esse carro tem uma bateria de " + str(self.tamanho_bateria) + '-KWh.')
+
+
 meu_carro = Carro('chevrolet', 'celta', 2009)
 print(meu_carro.get_descritivo_nome())
 meu_carro.leia_odometro()
@@ -82,4 +94,8 @@ meu_carro.atualiza_odometro(45)
 meu_carro.leia_odometro()
 meu_carro.incremente_odometro(-3)
 meu_carro.leia_odometro()
+meu_tesla = CarroEletrico('tesla', 'model s', 2022)
+print(meu_tesla.get_descritivo_nome())
+meu_tesla.descreve_bateria()
+
 
