@@ -98,4 +98,13 @@ meu_tesla = CarroEletrico('tesla', 'model s', 2022)
 print(meu_tesla.get_descritivo_nome())
 meu_tesla.descreve_bateria()
 
+from collections import OrderedDict
+favorite_languages = OrderedDict()
+favorite_languages['jen'] = 'python'
+favorite_languages['sarah'] = 'c'
+favorite_languages['edward'] = 'ruby'
+favorite_languages['phil'] = 'python'
+
+for name, language in favorite_languages.items():
+    print(name.title() + "'s favorite language is " + language.title() + '.')
 
