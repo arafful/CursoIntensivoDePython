@@ -1,0 +1,4 @@
+Teste de gravação de arquivo no python.
+Nova linha de arquivo.
+Acrescentando linhas com o parâmetro "a" na cláusula open.
+Nova linha de arquivo.
