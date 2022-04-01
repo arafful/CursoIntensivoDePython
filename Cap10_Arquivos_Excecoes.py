@@ -100,3 +100,61 @@ conta_palavras(filename)
 filenames = ['alice.txt', 'moby_dick.txt', 'little_women.txt', 'siddhartha.txt']
 for filename in filenames:
     conta_palavras(filename)
+
+
+import json
+
+numeros = [2, 3, 5, 7, 11, 13]
+filename = 'numeros.json'
+
+with open(filename, 'w') as f_obj:
+    json.dump(numeros, f_obj)
+
+
+filename = 'numeros.json'
+with open(filename) as f_obj:
+    numeros = json.load(f_obj)
+    print(numeros)
+
+
+def  get_novo_nome_usuario():
+    """
+    Pede um novo nome de usuário.
+    :return:
+    """
+    filename = 'usuario.json'
+    nome_usuario = input("Qual o seu nome? ")
+    with open(filename, 'w') as f_obj:
+        json.dump(nome_usuario, f_obj)
+        return nome_usuario
+
+
+def get_nome_usuario():
+    """
+    Obtem o nome do usuário caso já exista
+    :return:
+    """
+    filename = 'usuario.json'
+    try:
+        with open(filename) as f_obj:
+            nome_usuario = json.load(f_obj)
+    except FileNotFoundError:
+        return None
+    else:
+        return nome_usuario
+
+
+def saude_usuario():
+    """
+    Faz uma saudação ao usuário pelo nome
+    :return:
+    """
+    nome_usuario = get_nome_usuario()
+    if nome_usuario:
+        print("Bem vindo de volta", nome_usuario + '!')
+    else:
+        nome_usuario = get_novo_nome_usuario()
+        print("Vamos lembrar de você na próxima", nome_usuario + '.')
+
+
+saude_usuario()
